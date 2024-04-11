@@ -2,7 +2,7 @@
 
 BinaryThanos is a utility designed to bring balance to your filesystem, selectively snapping away binary files with a 50% chance. Inspired by the decisiveness of Thanos from the Marvel Universe and Ed posts on the COMP2017 forum, this tool aims to reduce clutter in your directories by half, targeting binary files that might no longer be necessary. You'll receive a mark deduction half the time!
 
-![thanosSnap](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHQ1bHVhd29iYTAxNHAwNDgyYnpsdWExOTgyOHF4cjk4dmw0and6NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUOxeZn47mrdabqDNC/giphy.gif)
+![thanosSnap](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWExN29zYmE0ajRjZHVxcjIxaTBiNzgwOHR5dXVxOHkxM3Mwb3JvMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ie76dJeem4xBDcf83e/giphy.gif)
 
 ## Description
 
