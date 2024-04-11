@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <time.h> // For seeding the random number generator
 
 bool is_binary_file(const char *file_path) {
     FILE *file = fopen(file_path, "rb"); // Open the file in binary mode
@@ -34,6 +35,8 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    srand((unsigned int)time(NULL)); // Seed the random number generator
+
     DIR *dir = opendir(argv[1]);
     if (dir == NULL) {
         perror("Failed to open directory");
@@ -51,9 +54,14 @@ int main(int argc, char *argv[]) {
         snprintf(full_path, sizeof(full_path), "%s/%s", argv[1], entry->d_name);
 
         if (is_binary_file(full_path)) {
-            printf("Removing binary file: %s\n", full_path);
-            if (remove(full_path) != 0) {
-                perror("Failed to remove file");
+            printf("Found binary file: %s\n", full_path);
+            if (rand() % 2 == 0) { // 50% chance to proceed with deletion
+                printf("Removing binary file: %s\n", full_path);
+                if (remove(full_path) != 0) {
+                    perror("Failed to remove file");
+                }
+            } else {
+                printf("Keeping binary file: %s\n", full_path);
             }
         }
     }
