@@ -19,4 +19,7 @@ clean:
 	rm -f $(TARGET)
 
 run: $(TARGET)
+	./$(TARGET) $(FILE_PATH)
+
+test: $(TARGET)
 	./$(TARGET) example
